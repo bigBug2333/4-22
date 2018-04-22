@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="first">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+    <input type="checkbox">
+    <div>        
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </div>
+    <button id="btn">点我</button>
+
+    <script>
+        var first = document.getElementById("first");
+        var input = first.getElementsByTagName("input");
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {            
+            for (var i = 0; i < input.length; i++) {
+                input[i].disabled = true;
+            }
+        }
+        
+    </script>
+</body>
+</html>

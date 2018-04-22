@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">点我</button>
+    <select>
+        <option value="娟娟">娟娟</option>;
+        <option value="1111">1111</option>;
+        <option value="2222">2222</option>;
+        <option value="3333">3333</option>;
+        <option value="4444">4444</option>;
+        <option value="5555">5555</option>;
+    </select>
+    <script>
+        var btn = document.getElementById("btn")
+        var opt = document.getElementsByTagName("option")
+        btn.onclick = function () {
+            var random = parseInt(Math.random() * opt.length);
+            opt[random].selected = true;
+        }
+    </script>
+</body>
+</html>
